@@ -1,0 +1,28 @@
+{
+  "name": "googlesheet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/endermejia/googlesheet.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/endermejia/googlesheet/issues"
+  },
+  "homepage": "https://github.com/endermejia/googlesheet#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "google-spreadsheet": "^3.3.0",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
