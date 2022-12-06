@@ -1,11 +1,16 @@
 const express = require('express');
+const cors = require('cors');
 
 const app = express();
 
-app.set('views', './src/views');
-app.set('view engine', 'pug');
+app.use(express.json());
 
-// routes
+// CORS
+app.use(cors());
+app.options('*', cors());
+
+// ROUTES
 app.use(require('./routes/google.routes'));
+
 
 module.exports = app;
