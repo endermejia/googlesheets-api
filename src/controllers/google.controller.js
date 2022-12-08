@@ -12,9 +12,35 @@ const getRowById = async (req, res) => {
 
 const createRow = async (req, res) => {
     console.log(req.body);
-    const {id, name, email, phone} = req.body;
+    const {
+        name,
+        lastName,
+        id,
+        phone,
+        email,
+        sex,
+        birthDate,
+        address,
+        postalCode,
+        city,
+        province,
+        whatsapp,
+        gdpr
+    } = req.body;
     const newRow = {
-        id, name, email, phone
+        name,
+        lastName,
+        id,
+        phone,
+        email,
+        sex,
+        birthDate,
+        address,
+        postalCode,
+        city,
+        province,
+        whatsapp,
+        gdpr
     }
     await googleSheet.createRow(newRow);
     res.json({message: 'Partner created'});
@@ -22,9 +48,34 @@ const createRow = async (req, res) => {
 
 const updateRow = async (req, res) => {
     const {id} = req.params;
-    const {name, email, phone} = req.body;
+    const {
+        name,
+        lastName,
+        phone,
+        email,
+        sex,
+        birthDate,
+        address,
+        postalCode,
+        city,
+        province,
+        whatsapp,
+        gdpr
+    } = req.body;
     const newRow = {
-        name, email, phone
+        name,
+        lastName,
+        id,
+        phone,
+        email,
+        sex,
+        birthDate,
+        address,
+        postalCode,
+        city,
+        province,
+        whatsapp,
+        gdpr
     }
     await googleSheet.updateRow(id, newRow);
     res.json({message: 'Partner updated'});
